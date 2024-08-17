@@ -36,7 +36,7 @@
         text-align: left;
       }
       #container {
-        max-width: 1000px;
+        max-width: 1400px;
         margin: 0 auto;
       }
     </style>
@@ -44,7 +44,7 @@
 
   
   <body>
-        <div class="mt-5 mb-4">
+        <div id="container" class="mt-5 mb-4">
           <h1> BEST SINGLE-PLAYER GAMES FOR PC </h1>
         </div>
         <!-- <h3 class="mt-5 mb-4"> 1. Plague Tale: Requiem</h3>
@@ -60,27 +60,28 @@
       <!-- <div style="text-align:center">
           <button class="btn btn-secondary "> Steam Link </button>
       </div> -->
-        <div class="lead">
+        <div id="container">
           <ul style="list-style-type:none;">
             <li>
           {% for i in info %}
           <div class="row">
-            <div class="border-bottom" style=padding-bottom:25px>
-            </div>
+              <div class="border-top" style=margin-top:30px>
+              </div>
             <div class="col-10">
-            <h2 class="mt-4 mb-4"> <b> {{i['name']}} </b> </h2> 
-            <h3> <b> Release Date: </b> {{i['release date']}} </h3>
+            <h2 class="mt-4 mb-2"> <b> {{i['name']}} </b> </h2> 
+              <div class="lead">
+                  {{i['about']}}
+              </div>
+            <h3 class="mt-2"> <b> Release Date: </b> {{i['release date']}} </h3>
             <h3> <b> Genre: </b> {{i['genre']}} </h3>
             <h3> <b> Developers: </b> {{i['developers']}} </h3>
-          </div>
+            </div>
     
             <div class="col-2">
-              <button class="btn btn-secondary mt-5"> Steam Page </button>
+              <button class="btn btn-secondary mt-4"> Steam Page </button>
             </div>
           </div>
           {% endfor %}
-              <div class="border-bottom" style=padding-bottom:25px>
-                </div>
             </li>
           </ul>
         </div>
